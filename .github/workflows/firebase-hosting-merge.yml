@@ -23,6 +23,8 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NIMAHS_WORLD }}
 
-      - run: firebase deploy
+      - run: |
+          firebase deploy
+          cat firebase-debug.log
         env:
           GOOGLE_APPLICATION_CREDENTIALS: gac.json
